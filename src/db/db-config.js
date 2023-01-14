@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-require('dotenv').config();
+const config = require('../config');
 
 const createUrl = () => {
-    const user = process.env.User;
-    const pass = process.env.Pass;
-    const urlEnd = process.env.UrlEnd
+    const user = config.User;
+    const pass = config.Pass;
+    const urlEnd = config.UrlEnd
     return `mongodb+srv://${user}:${pass}${urlEnd}`;
 }
 

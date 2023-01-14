@@ -138,6 +138,8 @@ example request for save game metadata:
 - add user avatar;
 - socket game;
 
+###
+node v.14
 ### use libs:
 
 - mongodb;

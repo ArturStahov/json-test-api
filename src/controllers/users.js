@@ -2,14 +2,15 @@ const { AuthService, UserService } = require('../services')
 const fs = require('fs').promises
 const path = require('path')
 const Jimp = require('jimp');
-require('dotenv').config()
 const { HttpCode } = require('../helpers/constants.js')
 const ErrorHandler = require('../helpers/errorHandler')
 const createFolderIsExist = require('../helpers/createDir')
 const serviceUser = new UserService()
 const serviceAuth = new AuthService()
 
-const AVATARS_DIR = process.env.AVATARS_DIR
+const config = require('../config');
+
+const AVATARS_DIR = config.AVATARS_DIR
 
 const reg = async (req, res, next) => {
     try {

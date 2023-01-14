@@ -1,9 +1,11 @@
 const passports = require('passport')
 const { Strategy, ExtractJwt } = require('passport-jwt')
-require('dotenv').config();
+
+const config = require('../config');
+
 const { UserService } = require('../services')
 
-const SECRET_KEY = process.env.JWT_SECRET_KEY
+const SECRET_KEY = config.JWT_SECRET_KEY
 
 const params = {
     secretOrKey: SECRET_KEY,

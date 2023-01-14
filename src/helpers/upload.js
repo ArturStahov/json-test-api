@@ -1,7 +1,8 @@
 const multer = require('multer')
 const path = require('path')
-require('dotenv').config()
-const UPLOAD_DIR = path.join(process.cwd(), process.env.UPLOAD_DIR)
+
+const config = require('../config');
+const UPLOAD_DIR = path.join(process.cwd(), config.UPLOAD_DIR)
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {

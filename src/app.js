@@ -5,16 +5,17 @@ const path = require('path')
 const logger = require('morgan');
 const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
-require('dotenv').config()
 const { HttpCode } = require('./helpers/constants.js')
 const routerSave = require('./api/save')
 const routerUsers = require('./api/users')
 const { ErrorHandler } = require('./helpers/errorHandler')
 const app = express()
-const expressWs = require('express-ws')(app);  
+const expressWs = require('express-ws')(app); 
+
+const config = require('./config'); 
 
 const accessLogStream = fs.createWriteStream(path.join(__dirname, "access.log"), { flags: "a" })
-const AVATARS_DIR = process.env.AVATARS_DIR
+const AVATARS_DIR = config.AVATARS_DIR
 
 const limiter = rateLimit({
     windowMs: 1 * 60 * 1000, // 1 minutes

@@ -1,8 +1,8 @@
 const { UsersRepository } = require('../repository')
 const jwt = require('jsonwebtoken')
-require('dotenv').config();
+const config = require('../config');
 
-const SECRET_KEY = process.env.JWT_SECRET_KEY
+const SECRET_KEY = config.JWT_SECRET_KEY
 
 class AuthServices {
     constructor() {
