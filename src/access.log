@@ -10,3 +10,11 @@
 ::1 - - [05/Dec/2022:20:40:33 +0000] "POST /api/users/login HTTP/1.1" 401 77
 ::1 - - [05/Dec/2022:20:41:15 +0000] "POST /api/users/login HTTP/1.1" 401 77
 ::1 - - [05/Dec/2022:20:41:33 +0000] "POST /api/users/registration HTTP/1.1" 409 80
+::1 - - [14/Jan/2023:10:40:35 +0000] "POST /api/users/registration HTTP/1.1" 400 95
+::1 - - [14/Jan/2023:21:52:36 +0000] "POST /api/users/login HTTP/1.1" 401 77
+::1 - - [14/Jan/2023:22:06:29 +0000] "POST /api/users/login HTTP/1.1" 401 77
+::1 - - [19/Jan/2023:20:56:59 +0000] "POST /api/users/login HTTP/1.1" 401 77
+::1 - - [19/Jan/2023:20:58:15 +0000] "POST /api/users/login HTTP/1.1" 401 77
+::1 - - [19/Jan/2023:21:39:37 +0000] "POST /api/users/registration HTTP/1.1" 400 97
+::1 - - [21/Jan/2023:14:47:37 +0000] "POST /api/users/registration HTTP/1.1" 409 80
+::1 - - [21/Jan/2023:15:27:59 +0000] "POST /api/users/login HTTP/1.1" 401 77
